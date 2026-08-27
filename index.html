@@ -53,6 +53,46 @@
   }
   .am-opt:hover { border-color: #C4D401; background: rgba(196,212,1,.07); }
   .am-opt.is-selected { background: rgba(196,212,1,.12); border-color: #C4D401; color: #C4D401; font-weight: 500; }
+
+  /* =====================================================================
+     Ajustes de mobile (<= 760px). Sobrescreve os estilos inline do
+     protótipo, que foram calibrados para o canvas de ~1240px.
+     ===================================================================== */
+  @media (max-width: 760px) {
+    /* --- ritmo vertical e recuo lateral das seções --- */
+    section:not(#am-hero), footer { padding-top: 56px !important; padding-bottom: 56px !important; }
+    [style*="max-width: 1240px"] { padding-left: 20px !important; padding-right: 20px !important; }
+
+    /* --- tipografia --- */
+    h1 { font-size: 25px !important; line-height: 1.22 !important; letter-spacing: -.3px !important; max-width: none !important; }
+    h2 { font-size: 22px !important; line-height: 1.25 !important; letter-spacing: -.2px !important; max-width: none !important; }
+    h2[style*="-1.2px"] { font-size: 27px !important; letter-spacing: -.4px !important; }  /* "Adrian Masella" */
+    h3 { font-size: 17px !important; }
+    h4 { font-size: 18px !important; }
+    [style*="font-size: 16.5px"] { font-size: 15px !important; }
+    [style*="clamp(17px, 1.8vw, 22px)"] { font-size: 15.5px !important; }  /* números longos dos cases */
+
+    /* --- HERO: remove a altura mínima que criava um vão enorme --- */
+    #am-hero [style*="min-height: clamp(620px"] { min-height: 0 !important; gap: 28px !important; }
+    #am-hero [style*="clamp(56px, 7vw, 96px)"] { padding-top: 40px !important; padding-bottom: 28px !important; }
+    #am-hero-mobile { max-height: 280px !important; object-fit: cover !important; border-radius: 14px !important; border: 1px solid #34352E; }
+
+    /* --- CTAs em pílula: cabem em uma linha --- */
+    a[href="#formulario"] { font-size: 14px !important; padding: 15px 22px !important; gap: 10px !important; }
+
+    /* --- FUNIL: tira o escalonamento de largura, que ficava esquisito --- */
+    [style*="clamp(20px, 2.6vw, 34px)"] > div { width: 100% !important; margin: 0 !important; padding: 14px 16px !important; }
+
+    /* --- CARDS: menos padding --- */
+    [style*="clamp(26px, 2.6vw, 36px)"], [style*="clamp(26px, 2.8vw, 38px)"] { padding: 22px !important; }
+    [style*="clamp(24px, 2.8vw, 36px)"] { padding: 20px !important; }  /* card do formulário */
+
+    /* --- MÉTODO (timeline): mais respiro entre os passos empilhados --- */
+    [style*="minmax(min(100%, 240px)"] { gap: 36px !important; }
+
+    /* --- QUEM SOU EU: os dois chips em coluna única --- */
+    [style*="minmax(min(100%, 160px)"] { grid-template-columns: 1fr !important; }
+  }
 </style>
 </head>
 <body>
