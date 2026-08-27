@@ -82,10 +82,19 @@
     #am-hero [style*="clamp(56px, 7vw, 96px)"] {
       padding-top: 72vw !important;      /* empurra o conteúdo para baixo do rosto */
       padding-bottom: 44px !important;
+      text-align: center !important;     /* centraliza logo, título, textos e CTA */
     }
+    #am-hero [style*="clamp(56px, 7vw, 96px)"] img { margin-left: auto !important; margin-right: auto !important; }
 
-    /* --- CTAs em pílula: cabem em uma linha --- */
-    a[href="#formulario"] { font-size: 14px !important; padding: 15px 22px !important; gap: 10px !important; }
+    /* --- CTAs em pílula: centralizados e em uma linha --- */
+    a[href="#formulario"] {
+      display: flex !important;
+      width: -moz-fit-content; width: fit-content;
+      max-width: 100%;
+      margin-left: auto !important; margin-right: auto !important;
+      justify-content: center;
+      font-size: 14px !important; padding: 15px 22px !important; gap: 10px !important;
+    }
 
     /* --- FUNIL: tira o escalonamento de largura, que ficava esquisito --- */
     [style*="clamp(20px, 2.6vw, 34px)"] > div { width: 100% !important; margin: 0 !important; padding: 14px 16px !important; }
