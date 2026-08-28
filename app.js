@@ -24,18 +24,30 @@
   function initStateStyles() {
     var els = document.querySelectorAll('[style-hover],[style-focus],[style-active]');
     Array.prototype.forEach.call(els, function (el) {
-      var base = el.getAttribute('style') || '';
       var sh = el.getAttribute('style-hover');
       var sf = el.getAttribute('style-focus');
       var sa = el.getAttribute('style-active');
       var on = { h: false, f: false, a: false };
 
+      // O style "base" é capturado quando NENHUM estado está ativo — e não
+      // uma única vez no load. Assim mudanças feitas por outros scripts
+      // (ex.: o reveal on scroll, que zera opacity/transform) são preservadas
+      // ao entrar/sair do hover, em vez de revertidas.
+      var snapshot = null;
+
+      function anyOn() { return on.h || on.f || on.a; }
+
       function render() {
-        var s = base;
+        if (!anyOn()) {
+          if (snapshot !== null) { el.style.cssText = snapshot; snapshot = null; }
+          return;
+        }
+        if (snapshot === null) snapshot = el.style.cssText;
+        var s = snapshot;
         if (on.h && sh) s += ';' + sh;
         if (on.f && sf) s += ';' + sf;
         if (on.a && sa) s += ';' + sa;
-        el.setAttribute('style', s);
+        el.style.cssText = s;
       }
 
       if (sh) {
