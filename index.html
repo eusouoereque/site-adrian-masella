@@ -94,8 +94,13 @@
       font-size: 14px !important; padding: 15px 22px !important; gap: 10px !important;
     }
 
-    /* --- FUNIL: tira o escalonamento de largura, que ficava esquisito --- */
-    [style*="clamp(20px, 2.6vw, 34px)"] > div { width: 100% !important; margin: 0 !important; padding: 14px 16px !important; }
+    /* --- FUNIL: mantém o afunilamento também no mobile (taper mais suave e menos padding) --- */
+    [style*="clamp(20px, 2.6vw, 34px)"] > div { margin: 0 auto !important; padding: 13px 14px !important; }
+    [style*="clamp(20px, 2.6vw, 34px)"] > div:nth-child(1) { width: 100% !important; }
+    [style*="clamp(20px, 2.6vw, 34px)"] > div:nth-child(2) { width: 95% !important; }
+    [style*="clamp(20px, 2.6vw, 34px)"] > div:nth-child(3) { width: 90% !important; }
+    [style*="clamp(20px, 2.6vw, 34px)"] > div:nth-child(4) { width: 85% !important; }
+    [style*="clamp(20px, 2.6vw, 34px)"] > div:nth-child(5) { width: 80% !important; }
 
     /* --- CARDS: menos padding --- */
     [style*="clamp(26px, 2.6vw, 36px)"], [style*="clamp(26px, 2.8vw, 38px)"] { padding: 22px !important; }
@@ -145,7 +150,7 @@
   <!-- ============ FUNIL ============ -->
   <section style="position: relative; overflow: hidden; padding: clamp(76px, 9vw, 132px) 0; border-bottom: 1px solid #34352E; background: linear-gradient(180deg, #050505 0%, #0b0c0b 100%);">
     <div aria-hidden="true" data-pattern-suave="1" style="position: absolute; top: -80px; right: -120px; width: 760px; height: 700px; pointer-events: none; opacity: .5; background-image: url('assets/pattern-setas.png'); background-size: 320px; background-repeat: repeat; -webkit-mask-image: radial-gradient(120% 120% at 88% 12%, #000 0%, rgba(0,0,0,.55) 38%, transparent 74%); mask-image: radial-gradient(120% 120% at 88% 12%, #000 0%, rgba(0,0,0,.55) 38%, transparent 74%);"></div>
-    <div style="position: relative; z-index: 4; max-width: 1240px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(40px, 5vw, 76px); align-items: start;">
+    <div style="position: relative; z-index: 4; max-width: 1240px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(40px, 5vw, 76px); align-items: center;">
       <div data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease;">
         <h2 style="margin: 0 0 20px; font-family: Montserrat, sans-serif; font-size: clamp(27px, 3.4vw, 42px); line-height: 1.16; font-weight: 700; letter-spacing: -.8px; color: #ffffff; max-width: 20ch;">Funis para captar <span style="color: #C4D401;">oportunidades reais</span> para sua empresa</h2>
         <p style="margin: 0 0 30px; font-size: 16.5px; line-height: 1.7; color: #E2E2E2; max-width: 44ch;">Funis de captação estruturados para geração de leads qualificados de acordo com o seu negócio.</p>
