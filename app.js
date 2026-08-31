@@ -110,11 +110,21 @@
       var x = pos.x, y = pos.y;
       var alvo = document.elementFromPoint(x, y);
       var bloqueado = !alvo || !!alvo.closest('#am-hero, footer, [data-faixa]');
-      var secao = alvo && alvo.closest('section:not(#am-hero)');
+      var secao = alvo && alvo.closest('section');
       halo.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
       if (bloqueado || !secao) { luz.style.opacity = '0'; return; }
-      var r = secao.getBoundingClientRect();
-      luz.style.clipPath = 'inset(' + Math.max(0, r.top) + 'px 0 ' + Math.max(0, window.innerHeight - r.bottom) + 'px 0)';
+      /* Clipa a luz só contra as zonas onde ela não pode aparecer
+         (hero, rodapé, faixas). Entre seções normais ela transita
+         livre, com o próprio degradê do halo suavizando a borda. */
+      var vh = window.innerHeight;
+      var top = 0, bottom = vh;
+      var zonas = document.querySelectorAll('#am-hero, footer, [data-faixa]');
+      for (var i = 0; i < zonas.length; i++) {
+        var b = zonas[i].getBoundingClientRect();
+        if (b.bottom <= y && b.bottom > top) top = b.bottom;
+        if (b.top >= y && b.top < bottom) bottom = b.top;
+      }
+      luz.style.clipPath = 'inset(' + Math.max(0, top) + 'px 0 ' + Math.max(0, vh - bottom) + 'px 0)';
       luz.style.opacity = CONFIG.luzDoMouse === false ? '0' : '1';
     }
     function agendar() { if (!pend) pend = requestAnimationFrame(aplicar); }
