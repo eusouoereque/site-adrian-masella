@@ -25,12 +25,10 @@
   button { font-family: inherit; cursor: pointer; }
   input, select { font-family: inherit; }
   ::selection { background: #C4D401; color: #050505; }
-  /* Art direction do banner */
-  /* Escala 133% = mostra a faixa central de 1920px do banner (laterais cortadas) */
-  #am-hero { background: #050505 url('assets/banner-hero.jpg') no-repeat center center / 133.33% auto; }
-  /* Abaixo de 1253px e acima de 2200px a altura é travada, então o banner preenche pela altura */
-  @media (max-width: 1252px) { #am-hero { background-size: auto 100%; } }
-  @media (min-width: 2200px) { #am-hero { background-size: auto 100%; } }
+  /* Art direction do banner: o banner preenche sempre pela altura da seção
+     (largura automática, laterais cortadas conforme a viewport). Evita o
+     zoom de ~1.33x que deixava o rosto grande demais entre 1253 e 2200px. */
+  #am-hero { background: #050505 url('assets/banner-hero.jpg') no-repeat center center / auto 100%; }
   @media (max-width: 760px) {
     [data-pattern-suave] { opacity: .16 !important; }
     #am-hero { background-image: none; }
