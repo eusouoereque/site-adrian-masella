@@ -101,6 +101,8 @@
     [style*="clamp(20px, 2.6vw, 34px)"] > div:nth-child(3) { width: 90% !important; }
     [style*="clamp(20px, 2.6vw, 34px)"] > div:nth-child(4) { width: 85% !important; }
     [style*="clamp(20px, 2.6vw, 34px)"] > div:nth-child(5) { width: 80% !important; }
+    /* número/ícone acima do texto, tudo centralizado no card (mobile) */
+    [style*="clamp(20px, 2.6vw, 34px)"] > div { flex-direction: column !important; align-items: center !important; text-align: center !important; gap: 10px !important; }
 
     /* --- CARDS: menos padding --- */
     [style*="clamp(26px, 2.6vw, 36px)"], [style*="clamp(26px, 2.8vw, 38px)"] { padding: 22px !important; }
@@ -159,10 +161,7 @@
           <p style="margin: 0; font-size: 15px; line-height: 1.75; color: #AFAFAF;">Isso consome tempo da equipe, dificulta a leitura dos resultados e torna cada vez mais difícil entender se o investimento em mídia está realmente contribuindo para o crescimento da empresa.</p>
           <p style="margin: 0; font-size: 15px; line-height: 1.75; color: #AFAFAF;">Uma boa estratégia de aquisição precisa considerar a qualidade das pessoas que chegam até o comercial e o que acontece com elas ao longo do processo de venda.</p>
         </div>
-        <p style="margin: 0 0 34px; font-size: 15.5px; line-height: 1.7; color: #E2E2E2; padding-left: 18px; border-left: 2px solid #C4D401;">Desenvolvemos uma estrutura para melhorar a qualidade dos leads captados e acompanhar o avanço dessas oportunidades ao longo do processo comercial, trazendo mais clareza para a operação.</p>
-        <a href="#formulario" style="display: inline-flex; align-items: center; gap: 12px; background: #C4D401; color: #050505; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 14.5px; padding: 17px 28px; border-radius: 8px; transition: transform .25s ease, box-shadow .25s ease, background .25s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 14px 34px rgba(196,212,1,.26); background: #d3e310;">Preciso de um funil de captação
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#050505" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg>
-        </a>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: #E2E2E2; padding-left: 18px; border-left: 2px solid #C4D401;">Desenvolvemos uma estrutura para melhorar a qualidade dos leads captados e acompanhar o avanço dessas oportunidades ao longo do processo comercial, trazendo mais clareza para a operação.</p>
       </div>
 
       <div data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease .12s, transform .7s ease .12s; background: #101211; border: 1px solid #34352E; border-radius: 18px; padding: clamp(20px, 2.6vw, 34px); display: grid; gap: 12px; position: relative; z-index: 4;">
@@ -189,6 +188,11 @@
           <span style="display: block;"><strong style="display: block; font-size: 15px; font-weight: 700; color: #050505; margin-bottom: 3px;">Acompanhamento</strong><span style="font-size: 13px; color: rgba(5,5,5,.72); line-height: 1.5;">Visão clara do avanço das oportunidades.</span></span>
         </div>
       </div>
+    </div>
+    <div style="position: relative; z-index: 4; max-width: 1240px; margin: clamp(34px, 4vw, 52px) auto 0; padding: 0 24px; display: flex; justify-content: center;">
+      <a href="#formulario" style="display: inline-flex; align-items: center; gap: 12px; background: #C4D401; color: #050505; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 14.5px; padding: 17px 28px; border-radius: 8px; transition: transform .25s ease, box-shadow .25s ease, background .25s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 14px 34px rgba(196,212,1,.26); background: #d3e310;">Preciso de um funil de captação
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#050505" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </a>
     </div>
   </section>
 
@@ -348,8 +352,7 @@
             <span style="font-size: 15px; line-height: 1.65; color: #E2E2E2;">Área comercial ou vendedor focado em atender os contatos gerados e compartilhar informações.</span>
           </li>
         </ul>
-        <p style="margin: 0 0 34px; font-size: 15px; line-height: 1.75; color: #AFAFAF; padding-left: 18px; border-left: 2px solid #34352E;">A união entre marketing e comercial é essencial para o sucesso de qualquer operação, e quanto mais alinhadas essas áreas estiverem, melhores serão as decisões tomadas nas campanhas.</p>
-        <a href="#formulario" style="display: inline-flex; align-items: center; gap: 12px; background: transparent; color: #C4D401; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 14.5px; padding: 16px 26px; border: 1px solid #C4D401; border-radius: 8px; transition: background .25s ease, color .25s ease, transform .25s ease;" style-hover="background: #C4D401; color: #050505; transform: translateY(-3px);">Preciso de mais oportunidades</a>
+        <p style="margin: 0; font-size: 15px; line-height: 1.75; color: #AFAFAF; padding-left: 18px; border-left: 2px solid #34352E;">A união entre marketing e comercial é essencial para o sucesso de qualquer operação, e quanto mais alinhadas essas áreas estiverem, melhores serão as decisões tomadas nas campanhas.</p>
       </div>
 
       <div data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease .12s, transform .7s ease .12s;">
