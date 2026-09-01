@@ -108,6 +108,8 @@
 
     /* --- MÉTODO (timeline): mais respiro entre os passos empilhados --- */
     [style*="minmax(min(100%, 240px)"] { gap: 36px !important; }
+    /* some a linha pontilhada horizontal quando os passos ficam empilhados */
+    [style*="rgba(196,212,1,.55) 0 7px"] { display: none !important; }
 
     /* --- QUEM SOU EU: os dois chips em coluna única --- */
     [style*="minmax(min(100%, 160px)"] { grid-template-columns: 1fr !important; }
@@ -243,28 +245,28 @@
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 30px;">
         <div data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; position: relative; padding-top: 34px;">
-          <span style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: repeating-linear-gradient(to right, #34352E 0 6px, transparent 6px 12px);"></span>
-          <span style="position: absolute; top: -17px; left: 0; width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid #C4D401; background: #0b0c0b; display: grid; place-items: center; font-size: 13px; font-weight: 700; color: #C4D401;">1</span>
+          <span style="position: absolute; top: 0; left: 17px; width: calc(100% + 30px); height: 2px; background: repeating-linear-gradient(to right, rgba(196,212,1,.55) 0 7px, transparent 7px 14px);"></span>
+          <span style="position: absolute; top: -17px; left: 0; width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid #C4D401; background: #0b0c0b; display: grid; place-items: center; font-size: 13px; font-weight: 700; color: #C4D401; z-index: 2;">1</span>
           <h3 style="margin: 0 0 12px; font-family: Montserrat, sans-serif; font-size: 17.5px; line-height: 1.3; font-weight: 600; color: #ffffff;">Conhecemos o cenário</h3>
           <p style="margin: 0 0 12px; font-size: 14px; line-height: 1.7; color: #AFAFAF;">Analisamos sua oferta, público, processo comercial, histórico de campanhas e objetivos de aquisição.</p>
           <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #AFAFAF;">Também entendemos como os leads são atendidos e quais características definem uma boa oportunidade para sua empresa.</p>
         </div>
         <div data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease .1s, transform .7s ease .1s; position: relative; padding-top: 34px;">
-          <span style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: repeating-linear-gradient(to right, #34352E 0 6px, transparent 6px 12px);"></span>
-          <span style="position: absolute; top: -17px; left: 0; width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid #C4D401; background: #0b0c0b; display: grid; place-items: center; font-size: 13px; font-weight: 700; color: #C4D401;">2</span>
+          <span style="position: absolute; top: 0; left: 17px; width: calc(100% + 30px); height: 2px; background: repeating-linear-gradient(to right, rgba(196,212,1,.55) 0 7px, transparent 7px 14px);"></span>
+          <span style="position: absolute; top: -17px; left: 0; width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid #C4D401; background: #0b0c0b; display: grid; place-items: center; font-size: 13px; font-weight: 700; color: #C4D401; z-index: 2;">2</span>
           <h3 style="margin: 0 0 12px; font-family: Montserrat, sans-serif; font-size: 17.5px; line-height: 1.3; font-weight: 600; color: #ffffff;">Estruturamos a aquisição</h3>
           <p style="margin: 0 0 12px; font-size: 14px; line-height: 1.7; color: #AFAFAF;">Definimos campanhas, públicos, mensagens, pontos de conversão e critérios de qualificação.</p>
           <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #AFAFAF;">Quando necessário, também organizamos a mensuração, formulários, integrações e automações envolvidas no processo.</p>
         </div>
         <div data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease .2s, transform .7s ease .2s; position: relative; padding-top: 34px;">
-          <span style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: repeating-linear-gradient(to right, #34352E 0 6px, transparent 6px 12px);"></span>
-          <span style="position: absolute; top: -17px; left: 0; width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid #C4D401; background: #0b0c0b; display: grid; place-items: center; font-size: 13px; font-weight: 700; color: #C4D401;">3</span>
+          <span style="position: absolute; top: 0; left: 17px; width: calc(100% + 30px); height: 2px; background: repeating-linear-gradient(to right, rgba(196,212,1,.55) 0 7px, transparent 7px 14px);"></span>
+          <span style="position: absolute; top: -17px; left: 0; width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid #C4D401; background: #0b0c0b; display: grid; place-items: center; font-size: 13px; font-weight: 700; color: #C4D401; z-index: 2;">3</span>
           <h3 style="margin: 0 0 12px; font-family: Montserrat, sans-serif; font-size: 17.5px; line-height: 1.3; font-weight: 600; color: #ffffff;">Colocamos as campanhas em operação</h3>
           <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #AFAFAF;">As campanhas entram no ar e começamos a gerar dados reais sobre comportamento, demanda e qualidade dos contatos.</p>
         </div>
         <div data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease .3s, transform .7s ease .3s; position: relative; padding-top: 34px;">
-          <span style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: repeating-linear-gradient(to right, #34352E 0 6px, transparent 6px 12px);"></span>
-          <span style="position: absolute; top: -17px; left: 0; width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid #C4D401; background: #C4D401; display: grid; place-items: center; font-size: 13px; font-weight: 700; color: #050505;">4</span>
+          <span style="position: absolute; top: 0; left: 17px; right: 0; height: 2px; background: repeating-linear-gradient(to right, rgba(196,212,1,.55) 0 7px, transparent 7px 14px);"></span>
+          <span style="position: absolute; top: -17px; left: 0; width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid #C4D401; background: #C4D401; display: grid; place-items: center; font-size: 13px; font-weight: 700; color: #050505; z-index: 2;">4</span>
           <h3 style="margin: 0 0 12px; font-family: Montserrat, sans-serif; font-size: 17.5px; line-height: 1.3; font-weight: 600; color: #ffffff;">Melhoramos a partir dos dados</h3>
           <p style="margin: 0 0 12px; font-size: 14px; line-height: 1.7; color: #AFAFAF;">Campanhas, anúncios e investimento são ajustados continuamente a partir da performance e das informações que chegam do comercial.</p>
           <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #AFAFAF;">Quanto melhor for esse retorno sobre a qualidade dos leads, mais informação teremos para orientar a aquisição.</p>
