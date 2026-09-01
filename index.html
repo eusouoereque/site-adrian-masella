@@ -108,8 +108,8 @@
 
     /* --- MÉTODO (timeline): mais respiro entre os passos empilhados --- */
     [style*="minmax(min(100%, 240px)"] { gap: 36px !important; }
-    /* some a linha pontilhada horizontal quando os passos ficam empilhados */
-    [style*="rgba(196,212,1,.55) 0 7px"] { display: none !important; }
+    /* linha pontilhada não vai até a beirada do card (mesmo comprimento do passo 4) */
+    [style*="rgba(196,212,1,.55) 0 7px"] { right: 0 !important; width: auto !important; }
 
     /* --- QUEM SOU EU: os dois chips em coluna única --- */
     [style*="minmax(min(100%, 160px)"] { grid-template-columns: 1fr !important; }
