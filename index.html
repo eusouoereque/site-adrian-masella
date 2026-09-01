@@ -102,9 +102,8 @@
     /* número/ícone acima do texto, tudo centralizado no card (mobile) */
     [style*="clamp(20px, 2.6vw, 34px)"] > div { flex-direction: column !important; align-items: center !important; text-align: center !important; gap: 10px !important; }
 
-    /* --- CARDS: menos padding --- */
-    [style*="clamp(26px, 2.6vw, 36px)"], [style*="clamp(26px, 2.8vw, 38px)"] { padding: 22px !important; }
-    [style*="clamp(24px, 2.8vw, 36px)"] { padding: 20px !important; }  /* card do formulário */
+    /* --- CARDS: menos padding (padding padronizado em clamp(26px, 2.6vw, 36px)) --- */
+    [style*="clamp(26px, 2.6vw, 36px)"] { padding: 22px !important; }
 
     /* --- MÉTODO (timeline): mais respiro entre os passos empilhados --- */
     [style*="minmax(min(100%, 240px)"] { gap: 36px !important; }
@@ -151,7 +150,7 @@
 
   <!-- ============ FUNIL ============ -->
   <section style="position: relative; overflow: hidden; padding: clamp(76px, 9vw, 132px) 0; border-bottom: 1px solid #34352E; background: linear-gradient(180deg, #050505 0%, #0b0c0b 100%);">
-    <div style="position: relative; z-index: 4; max-width: 1240px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(40px, 5vw, 76px); align-items: center;">
+    <div style="position: relative; z-index: 4; max-width: 1240px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(36px, 4.5vw, 70px); align-items: center;">
       <div data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease;">
         <h2 style="margin: 0 0 20px; font-family: Montserrat, sans-serif; font-size: clamp(27px, 3.4vw, 42px); line-height: 1.16; font-weight: 700; letter-spacing: -.8px; color: #ffffff; max-width: 20ch;">Funis para captar <span style="color: #C4D401;">oportunidades reais</span> para sua empresa</h2>
         <p style="margin: 0 0 30px; font-size: 16.5px; line-height: 1.7; color: #E2E2E2; max-width: 44ch;">Funis de captação estruturados para geração de leads qualificados de acordo com o seu negócio.</p>
@@ -224,7 +223,7 @@
           <p style="margin: 0; font-size: 14.5px; line-height: 1.7; color: #AFAFAF;">Ao acompanhar as principais ações da jornada de aquisição, identificamos quais campanhas geram leads, quais trazem melhores oportunidades e onde existem pontos que precisam ser ajustados.</p>
         </div>
       </div>
-      <div style="display: flex; justify-content: center; margin-top: clamp(38px, 4vw, 54px);">
+      <div style="display: flex; justify-content: center; margin-top: clamp(44px, 5vw, 62px);">
         <a href="#formulario" style="display: inline-flex; align-items: center; gap: 12px; background: #C4D401; color: #050505; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 14.5px; padding: 17px 28px; border-radius: 8px; transition: transform .25s ease, box-shadow .25s ease, background .25s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 14px 34px rgba(196,212,1,.26); background: #d3e310;">Quero receber leads qualificados
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#050505" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg>
         </a>
@@ -236,7 +235,7 @@
   <section style="position: relative; overflow: hidden; padding: clamp(76px, 9vw, 132px) 0; border-bottom: 1px solid #34352E; background: #16171A;">
     <div aria-hidden="true" style="position: absolute; inset: 0 0 auto; height: 300px; pointer-events: none; background-image: radial-gradient(rgba(196,212,1,.14) 1px, transparent 1px); background-size: 30px 30px; -webkit-mask-image: linear-gradient(#000, transparent); mask-image: linear-gradient(#000, transparent);"></div>
     <div style="position: relative; z-index: 4; max-width: 1240px; margin: 0 auto; padding: 0 24px;">
-      <div data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; text-align: center; margin-bottom: clamp(48px, 5vw, 70px);">
+      <div data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; text-align: center; margin-bottom: clamp(46px, 5vw, 66px);">
         <div style="display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px;">
           <span style="width: 7px; height: 7px; background: #C4D401; border-radius: 50%; display: inline-block;"></span>
           <span style="font-family: Montserrat, sans-serif; font-size: 11.5px; letter-spacing: 3px; text-transform: uppercase; color: #C4D401; font-weight: 600;">Método</span>
@@ -284,9 +283,9 @@
   <section style="position: relative; overflow: hidden; padding: clamp(76px, 9vw, 132px) 0; border-bottom: 1px solid #34352E;">
     <div aria-hidden="true" data-textura="1" style="position: absolute; inset: 0; pointer-events: none; opacity: .16; background: #C4D401; -webkit-mask-image: url('assets/textura-bg.png'), linear-gradient(90deg, #000 0%, rgba(0,0,0,.16) calc(50% - 430px), rgba(0,0,0,.16) calc(50% + 430px), #000 100%); -webkit-mask-size: 900px auto, 100% 100%; -webkit-mask-repeat: repeat, no-repeat; -webkit-mask-position: center, center; -webkit-mask-composite: source-in; mask-image: url('assets/textura-bg.png'), linear-gradient(90deg, #000 0%, rgba(0,0,0,.16) calc(50% - 430px), rgba(0,0,0,.16) calc(50% + 430px), #000 100%); mask-size: 900px auto, 100% 100%; mask-repeat: repeat, no-repeat; mask-position: center, center; mask-composite: intersect;"></div>
     <div style="position: relative; z-index: 4; max-width: 1240px; margin: 0 auto; padding: 0 24px;">
-      <h2 data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; margin: 0 auto clamp(44px, 5vw, 64px); font-family: Montserrat, sans-serif; font-size: clamp(26px, 3.2vw, 40px); line-height: 1.2; font-weight: 700; letter-spacing: -.8px; color: #ffffff; text-align: center; max-width: 26ch;">Alguns <span style="color: #C4D401;">resultados</span> alcançados pelos nossos clientes</h2>
+      <h2 data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; margin: 0 auto clamp(46px, 5vw, 66px); font-family: Montserrat, sans-serif; font-size: clamp(26px, 3.2vw, 40px); line-height: 1.2; font-weight: 700; letter-spacing: -.8px; color: #ffffff; text-align: center; max-width: 26ch;">Alguns <span style="color: #C4D401;">resultados</span> alcançados pelos nossos clientes</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 22px;">
-        <div data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease, border-color .3s ease; position: relative; z-index: 4; background: #101211; border: 1px solid #34352E; border-radius: 18px; padding: clamp(26px, 2.8vw, 38px);" style-hover="border-color: #C4D401;">
+        <div data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease, border-color .3s ease; position: relative; z-index: 4; background: #101211; border: 1px solid #34352E; border-radius: 18px; padding: clamp(26px, 2.6vw, 36px);" style-hover="border-color: #C4D401;">
           <span style="display: inline-flex; align-items: center; gap: 8px; font-family: Montserrat, sans-serif; font-size: 11px; letter-spacing: 2.4px; text-transform: uppercase; color: #C4D401; font-weight: 600; margin-bottom: 20px;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C4D401" stroke-width="2" stroke-linecap="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg>Caso 01
           </span>
@@ -308,7 +307,7 @@
           </div>
           <p style="margin: 0; padding-top: 20px; border-top: 1px solid #34352E; font-size: 13px; line-height: 1.6; color: #AFAFAF;">Ao longo da operação, foram aproximadamente R$ 3.100 investidos em mídia e R$ 37.500 em vendas.</p>
         </div>
-        <div data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease .12s, transform .7s ease .12s, border-color .3s ease; position: relative; z-index: 4; background: #101211; border: 1px solid #34352E; border-radius: 18px; padding: clamp(26px, 2.8vw, 38px);" style-hover="border-color: #C4D401;">
+        <div data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease .12s, transform .7s ease .12s, border-color .3s ease; position: relative; z-index: 4; background: #101211; border: 1px solid #34352E; border-radius: 18px; padding: clamp(26px, 2.6vw, 36px);" style-hover="border-color: #C4D401;">
           <span style="display: inline-flex; align-items: center; gap: 8px; font-family: Montserrat, sans-serif; font-size: 11px; letter-spacing: 2.4px; text-transform: uppercase; color: #C4D401; font-weight: 600; margin-bottom: 20px;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C4D401" stroke-width="2" stroke-linecap="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg>Caso 02
           </span>
@@ -336,7 +335,7 @@
 
   <!-- ============ FORMULÁRIO ============ -->
   <section id="formulario" style="position: relative; overflow: hidden; padding: clamp(76px, 9vw, 132px) 0; border-bottom: 1px solid #34352E; background: #16171A; scroll-margin-top: 24px;">
-    <div style="position: relative; z-index: 4; max-width: 1240px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(36px, 4vw, 64px); align-items: start;">
+    <div style="position: relative; z-index: 4; max-width: 1240px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(36px, 4.5vw, 70px); align-items: start;">
       <div data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease;">
         <h2 style="margin: 0 0 20px; font-family: Montserrat, sans-serif; font-size: clamp(26px, 3.2vw, 40px); line-height: 1.18; font-weight: 700; letter-spacing: -.8px; color: #ffffff; max-width: 20ch;">Para negócios que querem mais <span style="color: #C4D401;">oportunidades qualificadas</span></h2>
         <p style="margin: 0 0 30px; font-size: 16.5px; line-height: 1.7; color: #E2E2E2; max-width: 46ch;">Essa estrutura foi desenvolvida para empresas <span style="color: #C4D401;">B2B e B2C</span> que trabalham com vendas consultivas.</p>
@@ -354,7 +353,7 @@
       </div>
 
       <div data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease .12s, transform .7s ease .12s;">
-        <div style="position: relative; z-index: 4; overflow: hidden; background: #101211; border: 1px solid #34352E; border-radius: 18px; padding: clamp(24px, 2.8vw, 36px);">
+        <div style="position: relative; z-index: 4; overflow: hidden; background: #101211; border: 1px solid #34352E; border-radius: 18px; padding: clamp(26px, 2.6vw, 36px);">
           <div aria-hidden="true" style="position: absolute; top: -90px; right: -90px; width: 260px; height: 260px; pointer-events: none; background: radial-gradient(circle, rgba(196,212,1,.16) 0%, transparent 66%);"></div>
           <div style="position: relative; z-index: 1;">
             <span style="display: block; height: 4px; border-radius: 99px; background: #1C1C1B; overflow: hidden; margin-bottom: 28px;">
@@ -532,7 +531,7 @@
   </section>
 
   <!-- ============ QUEM SOU EU ============ -->
-  <section style="position: relative; overflow: hidden; padding: clamp(64px, 7vw, 104px) 0; background: #0b0c0b; border-bottom: 1px solid #34352E;">
+  <section style="position: relative; overflow: hidden; padding: clamp(76px, 9vw, 132px) 0; background: #0b0c0b; border-bottom: 1px solid #34352E;">
     <img alt="" aria-hidden="true" src="assets/logo-simbolo.png" loading="lazy" decoding="async" style="position: absolute; right: -6%; top: 50%; transform: translateY(-50%); width: min(48vw, 560px); pointer-events: none; opacity: .06;">
     <div style="position: relative; z-index: 4; max-width: 1240px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(36px, 4.5vw, 70px); align-items: center;">
       <div data-reveal="1" style="opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; position: relative; z-index: 4;">
