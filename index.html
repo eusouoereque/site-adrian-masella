@@ -85,12 +85,14 @@
     /* --- CTAs em pílula: centralizados e em uma linha --- */
     a[href="#formulario"] {
       display: flex !important;
-      width: -moz-fit-content; width: fit-content;
-      max-width: 100%;
+      width: 100% !important;
+      max-width: 360px !important;
       margin-left: auto !important; margin-right: auto !important;
       justify-content: center;
-      font-size: 14px !important; padding: 15px 22px !important; gap: 10px !important;
+      font-size: 15.5px !important; padding: 17px 22px !important; gap: 10px !important;
     }
+    /* botões primários do formulário: mesma escala de fonte dos CTAs */
+    button[style*="width: 100%"] { font-size: 16px !important; }
 
     /* --- FUNIL: mantém o afunilamento também no mobile (taper mais suave e menos padding) --- */
     [style*="clamp(20px, 2.6vw, 34px)"] > div { margin: 0 auto !important; padding: 13px 14px !important; }
@@ -272,7 +274,7 @@
         </div>
       </div>
       <div style="display: flex; justify-content: center; margin-top: clamp(44px, 5vw, 62px);">
-        <a href="#formulario" style="display: inline-flex; align-items: center; gap: 12px; background: #C4D401; color: #050505; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 14.5px; padding: 17px 28px; border-radius: 8px; transition: transform .25s ease, box-shadow .25s ease, background .25s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 14px 34px rgba(196,212,1,.26); background: #d3e310;">Quero aplicar o método na minha operação
+        <a href="#formulario" style="display: inline-flex; align-items: center; gap: 12px; background: #C4D401; color: #050505; font-family: Montserrat, sans-serif; font-weight: 700; font-size: 14.5px; padding: 17px 28px; border-radius: 8px; transition: transform .25s ease, box-shadow .25s ease, background .25s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 14px 34px rgba(196,212,1,.26); background: #d3e310;">Quero aplicar esse método
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#050505" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"></path><path d="m12 5 7 7-7 7"></path></svg>
         </a>
       </div>
